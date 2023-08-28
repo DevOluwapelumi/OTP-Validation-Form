@@ -5,14 +5,11 @@ The OTP Validation Form is a user interface component designed to verify users t
 Components:
 
 HTML Structure: The form consists of the following elements:
-
 Input field for entering the OTP digits.
 "Resend OTP" button to request a new OTP.
 "Verify" button to submit the entered OTP for validation.
 CSS Styling: The form is styled using CSS to provide an attractive and user-friendly appearance. CSS is used for layout, colors, and animations to enhance the user experience.
-
 JavaScript Functionality: JavaScript is used to add interactivity and validation logic to the form:
-
 OTP Generation: When the user requests a new OTP (by clicking "Resend OTP"), a new OTP is generated on the server and sent to the user's registered contact.
 OTP Validation: When the user enters the OTP in the input field and clicks "Verify," JavaScript compares the entered OTP with the one stored on the server. If they match, the user is granted access; otherwise, an error message is displayed.
 Timer: A countdown timer is implemented to prevent users from requesting new OTPs too frequently. Once the timer expires, the "Resend OTP" button becomes active again.
