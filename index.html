@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Validation Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .container {
+          margin-top: 50px;
+          max-width: 400px;
+        }
+        .container {
+  margin-top: 100px;
+}
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h2>OTP Validation Form</h2>
+        <form id="otpForm" onsubmit="validateOTP(event)">
+          <div class="form-row">
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit1" maxlength="1" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit2" maxlength="1" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit3" maxlength="1" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control otp-input" id="digit4" maxlength="1" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Verify</button>
+        </form>
+        <div id="message"></div>
+        <div class="otp-info">
+      <div id="generatedOTP"></div>
+      <div id="expiration" hidden></div>
+      <div id="countdown"></div>
+      <button id="resendButton" type="button" class="btn btn-secondary" onclick="resendOTP()">Resend</button>
+        </div>
+      </div>
+</body>
+<script src="./main.js"></script>
+
+
+<div class="container">
+    <h2>OTP Validation Form</h2>
+    <form id="otpForm">
+      <div class="form-group">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" class="form-control" id="otp" name="otp" maxlength="6" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Verify OTP</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById("otpForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var otpInput = document.getElementById("otp").value;
+      var otpPattern = /^\d{6}$/;
+
+      if (otpPattern.test(otpInput)) {
+        alert("OTP is valid. Access granted!");
+        // Perform any further actions here after successful validation
+      } else {
+        alert("Invalid OTP. Please try again.");
+        // Clear the OTP input field for re-entry
+        document.getElementById("otp").value = "";
+      }
+    });
+  </script>
+
+
+
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h3>OTP Validation</h3>
+        <form id="otpForm">
+          <div class="form-group">
+            <input type="text" class="form-control" id="otpInput" placeholder="Enter OTP" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Validate</button>
+        </form>
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
+
+
+
+
+
+  
+</html>
