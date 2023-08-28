@@ -25,3 +25,10 @@ If the OTP is correct, the user gains access to the system or service; if not, a
 If the user experiences delays in receiving the OTP, they can click the "Resend OTP" button to request a new one.
 The user is notified about the countdown timer preventing rapid OTP requests.
 The user successfully gains access upon successful OTP validation.
+
+
+Benefits:
+
+Enhanced Security: OTPs provide an additional layer of security by requiring a unique code for each login attempt.
+User Verification: OTPs verify the authenticity of users by confirming their possession of the registered contact information.
+User-Friendly: The form's intuitive design and interactivity enhance the user experience, making the verification process smoother.
